@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansh's Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text"></div>
+            <p>UI/UX Designer</p>
+            <h1>Hi, I'm <span>Ansh</span><br>Gupta from Ontario, Canada</h1>
+    </div>
+</div>
+<!----------------about------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpeg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi My name is Ansh and am currently pursuing my last year at Western Univeristy
+                    majoring in Computer Science. 
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/Ux</span><br>Designing Web/App Interface</li>
+                        <li><span>Web Development</span><br>Web Development</li>
+                        <li><span>App Development</span><br>Building IOS/Andorid Apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2024</span><br>PRAGRA UX/UI Development Course</li>
+                        <li><span>2025</span><br>BSC in Computer Science </li>
+                        <li><span>2025</span><br>IBM X certificate</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>June 2022 - September 2022</span><br>Technology Services Assistant for Western Alumni </li>
+                        <li><span>September 2022 - April 2023</span><br>Residence Don for Western University</li>
+                        <li><span>June 2023 - August 2023</span><br>Personal Banker for Bank Of Montreal</li>
+                        <li><span>May 2024 - August 2024</span><br>Software Developer for Millomat Stampings</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------- services --------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Game Creation</h2>
+                <p>Math Match-Up | Python, Java, React, PostgreSQL, Docker - Jan 2024 to May 2024
+                • Developed a full-stack game application using Flask serving a REST API with React as the frontend
+                • Collaborated with 4 other class members to create a game intended to challenge children to test their math skills
+                • Visualized GitHub data to show collaboration</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>Java Game</h2>
+                <p>Math Match-Up | Python, Java, React, PostgreSQL, Docker - Jan 2024 to May 2024
+                    • Developed a full-stack game application using Flask serving a REST API with React as the frontend
+                    • Collaborated with 4 other class members to create a game intended to challenge children to test their math
+                    skills
+                    • Visualized GitHub data to show collaboration</p>
+                <a href="#">learn more</a>
+            </div> 
+        </div>
+    </div>
+</div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+            }
+    </script>
+</body>
+</html>
